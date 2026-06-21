@@ -1,13 +1,12 @@
 #include <iostream>
-#include <vector>
 
 using namespace std;
 
 int main() {
     int N;
     if (!(cin >> N)) return 0;
-    
-    vector<int> rollNumbers(N);
+
+    int rollNumbers[1000]; 
     for (int i = 0; i < N; i++) {
         cin >> rollNumbers[i];
     }
@@ -19,7 +18,7 @@ int main() {
     for (int i = 0; i < N; i++) {
         if (rollNumbers[i] == X) {
             foundIndex = i;
-            break; // Stop at the first occurrence
+            break; // Stop when found
         }
     }
     
